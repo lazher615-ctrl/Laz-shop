@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Laz Shop AI | Smart Finds</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#142d42;background:#f8faf9}
+header{padding:20px 6%;background:#102a43;color:white;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:24px;font-weight:bold}
+.logo span{color:#52d5c1}
+nav a{color:white;text-decoration:none;margin:0 8px;font-size:14px}
+.hero{text-align:center;padding:65px 20px;background:linear-gradient(135deg,#e1f6f0,#f5f8fa)}
+.hero h1{font-size:clamp(36px,7vw,58px);margin:0 0 15px}
+.hero h1 span{color:#119b8c}
+.hero p{color:#566b79;line-height:1.7}
+.btn{display:inline-block;padding:13px 20px;border-radius:8px;background:#102a43;color:white;text-decoration:none;border:0;cursor:pointer;font-weight:bold}
+section{padding:45px 6%}
+h2{text-align:center;font-size:30px}
+.filters{text-align:center;margin:22px 0}
+.filters button{padding:9px 15px;margin:4px;border:1px solid #dce6e2;border-radius:22px;background:white;cursor:pointer}
+.filters button.active{background:#102a43;color:white}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:white;border:1px solid #e3eae7;border-radius:14px;overflow:hidden}
+.picture{height:170px;display:grid;place-items:center;font-size:65px;background:#e1f4ee}
+.card:nth-child(2) .picture{background:#f5ebdf}
+.card:nth-child(3) .picture{background:#e6edf8}
+.card:nth-child(4) .picture{background:#edf2dc}
+.details{padding:18px}
+.details h3{margin:7px 0}
+.details p{font-size:14px;line-height:1.6;color:#637480;min-height:45px}
+.price{font-weight:bold;color:#078b7c}
+.small{font-size:11px;color:#89959d;font-weight:normal}
+.order{display:block;text-align:center;background:#102a43;color:white;text-decoration:none;padding:11px;border-radius:7px;margin-top:15px}
+.notice{background:#fff5df;padding:14px;border-radius:8px;font-size:13px;line-height:1.6;color:#735925;margin:20px 0}
+.about{text-align:center;background:#e6f5f0;line-height:1.8}
+footer{text-align:center;background:#102a43;color:white;padding:28px 15px;font-size:13px}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">Laz Shop <span>AI.</span></div>
+  <nav>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Smart finds.<br><span>Better everyday.</span></h1>
+  <p>Discover useful products for your home, travel and everyday life.</p>
+  <a class="btn" href="#shop">Explore Products →</a>
+</div>
+
+<section id="shop">
+  <h2>Explore Our Collection</h2>
+  <p style="text-align:center;color:#637480">Useful discoveries for modern living.</p>
+
+  <div class="notice">
+    Demo store: prices below are examples, not verified supplier prices.
+    Confirm availability, shipping and total costs before accepting orders.
+  </div>
+
+  <div class="filters">
+    <button class="active" data-filter="all">All</button>
+    <button data-filter="tech">Technology</button>
+    <button data-filter="home">Home</button>
+    <button data-filter="travel">Travel</button>
+  </div>
+
+  <div class="grid">
+    <article class="card" data-category="tech">
+      <div class="picture">📱</div>
+      <div class="details">
+        <small>TECH ACCESSORIES</small>
+        <h3>Foldable Phone Stand</h3>
+        <p>A practical stand for video calls and hands-free viewing.</p>
+        <div class="price">$8.00 <span class="small">example price</span></div>
+        <a class="order" href="#contact" data-product="Foldable Phone Stand">Ask About Product</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="home">
+      <div class="picture">🏠</div>
+      <div class="details">
+        <small>HOME ESSENTIALS</small>
+        <h3>Home Organizer</h3>
+        <p>Keep your desk and everyday essentials tidy.</p>
+        <div class="price">$12.00 <span class="small">example price</span></div>
+        <a class="order" href="#contact" data-product="Home Organizer">Ask About Product</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="travel">
+      <div class="picture">🎒</div>
+      <div class="details">
+        <small>TRAVEL ACCESSORIES</small>
+        <h3>Travel Organizer</h3>
+        <p>A compact pouch for cables and travel essentials.</p>
+        <div class="price">$10.00 <span class="small">example price</span></div>
+        <a class="order" href="#contact" data-product="Travel Organizer">Ask About Product</a>
+      </div>
+    </article>
+
+    <article class="card" data-category="home">
+      <div class="picture">🥤</div>
+      <div class="details">
+        <small>EVERYDAY ESSENTIALS</small>
+        <h3>Reusable Bottle</h3>
+        <p>A reusable bottle for your daily activities.</p>
+        <div class="price">$14.00 <span class="small">example price</span></div>
+        <a class="order" href="#contact" data-product="Reusable Bottle">Ask About Product</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About Laz Shop AI</h2>
+  <p>We aim to discover practical products that make everyday life easier.<br>
+  Our collection is growing as we review products and suppliers.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact & Product Inquiries</h2>
+  <p style="text-align:center;color:#637480">
+    Interested in a product? Prepare an inquiry below.
+  </p>
+  <form id="inquiry" style="max-width:500px;margin:auto">
+    <label>Your name<br><input name="name" required style="width:100%;padding:12px;margin:8px 0 15px"></label>
+    <label>Your email<br><input name="email" type="email" required style="width:100%;padding:12px;margin:8px 0 15px"></label>
+    <label>Product or question<br><textarea id="message" required rows="4" style="width:100%;padding:12px;margin:8px 0 15px"></textarea></label>
+    <button class="btn" type="submit">Prepare Email</button>
+    <p style="font-size:12px;color:#637480">This demo prepares an email; it does not store or send your data automatically.</p>
+  </form>
+</section>
+
+<footer>
+  <div class="logo">Laz Shop <span>AI.</span></div>
+  <p>Smart finds for everyday life.</p>
+  <p>© <span id="year"></span> Laz Shop AI</p>
+</footer>
+
+<script>
+document.querySelectorAll("[data-filter]").forEach(button=>{
+  button.addEventListener("click",()=>{
+    document.querySelectorAll("[data-filter]").forEach(b=>b.classList.remove("active"));
+    button.classList.add("active");
+    const filter=button.dataset.filter;
+    document.querySelectorAll(".card").forEach(card=>{
+      card.hidden=filter!=="all" && card.dataset.category!==filter;
+    });
+  });
+});
+
+document.querySelectorAll("[data-product]").forEach(link=>{
+  link.addEventListener("click",()=>{
+    document.getElementById("message").value=
+      "I am interested in: "+link.dataset.product+
+      ". Please confirm price, availability and shipping.";
+  });
+});
+
+document.getElementById("inquiry").addEventListener("submit",event=>{
+  event.preventDefault();
+  const name=event.target.elements.name.value;
+  const email=event.target.elements.email.value;
+  const message=document.getElementById("message").value;
+  const subject=encodeURIComponent("Laz Shop AI product inquiry");
+  const body=encodeURIComponent("Name: "+name+"\nEmail: "+email+"\n\n"+message);
+  window.location.href="mailto:YOUR_EMAIL@example.com?subject="+subject+"&body="+body;
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
